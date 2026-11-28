@@ -80,13 +80,11 @@ SADKD is evaluated on the following industrial anomaly detection datasets.
 
 **1. MVTec AD Dataset**
 
-- Official website: https://www.mvtec.com/company/research/datasets/mvtec-ad
 - Contains 15 object and texture categories.
 - Provides normal training images and normal/anomalous test images with pixel-level annotations.
 
 **2. VisA Dataset**
 
-- Official repository: https://github.com/amazon-science/spot-diff
 - Contains 12 industrial object categories.
 - Includes complex backgrounds, multiple objects, reflective surfaces, and diverse defect patterns.
 
