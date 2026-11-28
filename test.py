@@ -120,13 +120,13 @@ def evaluation(encoder, bn, decoder, ca_list, dataloader, device, _class_=None):
 # ==================== 3. 测试与参数统计主函数 ====================
 
 def test(_class_, data_path, weight_type='best'):
-    print(f"\n🚀 Testing Class: [{_class_.upper()}]")
+    print(f"\n Testing Class: [{_class_.upper()}]")
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     encoder, bn, decoder, ca_list = get_model(device, 256)
 
     ckp_path = f'./checkpoints4/ca_rd4ad_{_class_}_{weight_type}.pth'
     if not os.path.exists(ckp_path):
-        print(f"❌ Checkpoint not found: {ckp_path}")
+        print(f" Checkpoint not found: {ckp_path}")
         return 0, 0, 0, 0
 
     ckp = torch.load(ckp_path, map_location=device)
@@ -139,7 +139,7 @@ def test(_class_, data_path, weight_type='best'):
     p_train = (count_parameters(bn) + count_parameters(ca_list) + count_parameters(decoder)) / 1e6
 
     print("-" * 45)
-    print(f"📊 Model Complexity Breakdown:")
+    print(f"Model Complexity Breakdown:")
     print(f"   - Encoder (Frozen) : {p_en:.2f} M")
     print(f"   - Trainable Parts  : {p_train:.3f} M (BN+CA+Decoder)")
     print("-" * 45)
@@ -149,7 +149,7 @@ def test(_class_, data_path, weight_type='best'):
                              batch_size=1, shuffle=False)
 
     px_auc, sp_auc, sm = evaluation(encoder, bn, decoder, ca_list, test_loader, device, _class_=_class_)
-    print(f"✨ Results: Pixel-AUC: {px_auc} | Image-AUC: {sp_auc} | S-measure: {sm}")
+    print(f" Results: Pixel-AUC: {px_auc} | Image-AUC: {sp_auc} | S-measure: {sm}")
 
     return px_auc, sp_auc, sm, p_train
 
