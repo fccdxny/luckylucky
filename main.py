@@ -142,7 +142,7 @@ def train(_class_, data_path):
 
         for img, _ in train_dataloader:
             img = img.to(device)
-            # 💡 建议早期把 anomaly_prob 调高到 0.5 试试
+           
             augmented_img, mask = generate_pseudo_anomaly_batch(img, device, anomaly_prob=0.2)
             
             with torch.no_grad():
@@ -184,7 +184,7 @@ def train(_class_, data_path):
                     'ca_list': ca_list.state_dict()
                 }
                 torch.save(save_dict, best_ckp_path)
-                print(f'>>> 🌟 Saved Best Weights: {best_mean_score:.4f}')
+                print(f'>>> Saved Best Weights: {best_mean_score:.4f}')
     
     return best_mean_score
 
