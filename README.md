@@ -18,7 +18,7 @@ SADKD is evaluated on two widely used industrial anomaly detection benchmarks: *
 
 The overall architecture of SADKD is illustrated below.
 
-![SADKD Architecture](figures/SADKD_framework.png)
+![SADKD Architecture](figures/framework.png)
 
 ### Main Components
 
