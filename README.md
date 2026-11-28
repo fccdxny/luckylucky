@@ -199,8 +199,8 @@ SADKD achieves competitive performance on the MVTec AD benchmark.
 The reported average results are:
 
 
-<img width="1113" alt="Result" src="framework.png" />
-<img width="1113" alt="Heatmap" src="framework.png" />
+<img width="1113" alt="Result" src="result.png" />
+<img width="1113" alt="Heatmap" src="heatmap.png" />
 
 ### 2. VisA Dataset
 
