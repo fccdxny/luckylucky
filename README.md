@@ -18,7 +18,6 @@ SADKD is evaluated on two widely used industrial anomaly detection benchmarks: *
 
 The overall architecture of SADKD is illustrated below.
 
-%![SADKD Architecture](figures/framework.png)
 <img width="1113" alt="SADKD Framework" src="framework.png" />
 
 ### Main Components
@@ -199,13 +198,9 @@ SADKD achieves competitive performance on the MVTec AD benchmark.
 
 The reported average results are:
 
-| Metric | SADKD |
-|:---|---:|
-| I-AUROC | 99.31% |
-| P-AUROC | 98.13% |
-| AUPRO | 95.01% |
 
-SADKD achieves 100% image-level AUROC on 8 out of 15 categories.
+<img width="1113" alt="Result" src="framework.png" />
+<img width="1113" alt="Heatmap" src="framework.png" />
 
 ### 2. VisA Dataset
 
